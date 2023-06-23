@@ -1,0 +1,334 @@
+:root {
+  /* colors */
+  --clr-primary--blue: hsl(246, 80%, 60%);
+  --clr-primary--light-red: hsl(15, 100%, 70%);
+  --clr-primary--soft-blue: hsl(195, 74%, 62%);
+  --clr-primary--light-red-2: hsl(348, 100%, 68%);
+  --clr-primary--lime-green: hsl(145, 58%, 55%);
+  --clr-primary--violet: hsl(264, 64%, 52%);
+  --clr-primary--soft-orange: hsl(43, 84%, 65%);
+
+  --clr-neutral--very-dark-blue: hsl(226, 43%, 10%);
+  --clr-neutral--dark-blue: hsl(235, 46%, 20%);
+  --clr-neutral-dark-blue-hovered: hsl(235, 46%, 30%);
+  --clr-neutral--desaturated: hsl(235, 45%, 61%);
+  --clr-neutral--pale-blue: hsl(236, 100%, 87%);
+
+  --fz-default: 1.6rem;
+  --fz-card-title: 3.8rem;
+  --fz-task-duration-current: 3.8rem;
+
+  --ff-primary: "Rubik", sans-serif;
+
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+
+  --max-width: 100rem;
+
+  --pad-50: 0.5em;
+  --pad-100: 1em;
+  --pad-150: 1.5em;
+  --pad-200: 2em;
+  --pad-250: 2.5em;
+
+  --mg-25: 0.25em;
+  --mg-50: 0.5em;
+  --mg-75: 0.75em;
+  --mg-100: 1em;
+  --mg-150: 1.5em;
+  --mg-200: 2em;
+  --mg-250: 2.5em;
+
+  --bdrs: 1em;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: var(--fz-default);
+  font-family: var(--ff-primary);
+  background-color: var(--clr-neutral--very-dark-blue);
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 95%;
+  max-width: var(--max-width);
+  margin: var(--mg-200) auto;
+  gap: 2em;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.main-card {
+  grid-row: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  padding-block: var(--pad-150);
+  margin-block-end: 2em;
+  position: relative;
+  min-height: 35vh;
+}
+
+.main-card__name {
+  font-size: 2rem;
+  font-weight: var(--fw-normal);
+}
+
+.main-card__content,
+.main-card__details {
+  position: absolute;
+  width: 100%;
+  padding: var(--pad-150);
+  border-radius: var(--bdrs);
+}
+
+.main-card__content {
+  display: flex;
+  inset-block-start: 10%;
+  height: 60%;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background-color: var(--clr-primary--blue);
+}
+
+.main-card__img,
+.card__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 3px solid white;
+}
+
+.main-card__img {
+  object-fit: cover;
+  margin-inline-end: var(--mg-100);
+}
+
+.main-card__details {
+  display: flex;
+  inset-block-end: -2%;
+  height: 40%;
+  align-items: flex-end;
+  z-index: 1;
+  justify-content: space-around;
+  background-color: var(--clr-neutral--dark-blue);
+}
+
+.main-card__detail {
+  margin-block-end: var(--mg-75);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.active {
+  opacity: 1;
+}
+
+.card {
+  min-height: 25vh;
+  position: relative;
+  padding: var(--pad-100);
+  border-radius: var(--bdrs);
+  background-color: var(--clr-neutral--dark-blue);
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: var(--clr-neutral-dark-blue-hovered);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40%;
+}
+
+.card__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__options {
+  margin-block-start: -5px;
+  opacity: 0.7;
+}
+
+.card__detials {
+  display: flex;
+  align-items: center;
+  margin-block-start: var(--mg-100);
+  justify-content: space-between;
+}
+
+.card__options:hover {
+  opacity: 1;
+}
+
+.card__task-duration-current {
+  margin-block: var(--mg-50) var(--mg-25);
+  font-size: var(--fz-task-duration-current);
+}
+
+.card--task-work,
+.card--task-play,
+.card--task-exercise,
+.card--task-self-care,
+.card--task-social,
+.card--task-study {
+  margin-block-end: var(--mg-200);
+}
+
+.card--task-work::before,
+.card--task-play::before,
+.card--task-exercise::before,
+.card--task-self-care::before,
+.card--task-social::before,
+.card--task-study::before {
+  content: "";
+  position: absolute;
+  display: block;
+  inset: 0;
+  inset-block-start: -25%;
+  width: 100%;
+  border-radius: var(--bdrs);
+  height: 50%;
+  z-index: -1;
+}
+
+.card--task-work::before {
+  background: var(--clr-primary--light-red) url(../images/icon-work.svg)
+    no-repeat;
+  background-position: right top;
+}
+
+.card--task-play::before {
+  background: var(--clr-primary--soft-blue) url(../images/icon-play.svg)
+    no-repeat;
+  background-position: right top;
+}
+
+.card--task-study::before {
+  background: var(--clr-primary--light-red-2) url(../images/icon-study.svg)
+    no-repeat;
+  background-position: right top;
+}
+
+.card--task-exercise::before {
+  background: var(--clr-primary--lime-green) url(../images/icon-exercise.svg)
+    no-repeat;
+  background-position: right top;
+}
+
+.card--task-social::before {
+  background: var(--clr-primary--violet) url(../images/icon-social.svg)
+    no-repeat;
+  background-position: right top;
+}
+
+.card--task-self-care::before {
+  background: var(--clr-primary--soft-orange) url(../images/icon-self-care.svg)
+    no-repeat;
+  background-position: right top;
+}
+
+@media (min-width: 40em) {
+  body {
+    display: grid;
+    place-items: center;
+  }
+
+  .main-card__img,
+  .card__img {
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    border: 3px solid white;
+  }
+
+  .main-card__img {
+    margin-inline-end: 0;
+    margin-block-end: var(--mg-150);
+  }
+
+  .main-card {
+    margin-block-end: 0;
+  }
+
+  .main-card__content,
+  .main-card__details {
+    position: absolute;
+  }
+
+  .main-card__content {
+    flex-direction: column;
+    inset-block-start: -12%;
+    height: 85%;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .main-card__name {
+    margin-block-start: var(--mg-25);
+    font-size: var(--fz-card-title);
+  }
+
+  .main-card__details {
+    inset-block-end: -12%;
+    height: 50%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .card--task-work,
+  .card--task-play,
+  .card--task-exercise,
+  .card--task-self-care,
+  .card--task-social,
+  .card--task-study {
+    margin-block-end: 0;
+  }
+
+  .card--task-exercise,
+  .card--task-social,
+  .card--task-self-care {
+    inset-block-start: 25%;
+  }
+
+  .card__detials {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

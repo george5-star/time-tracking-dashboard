@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/images/favicon-32x32.png"
+    />
+
+    <!-- link to typeface -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/css/styles.css" />
+
+    <script src="./src/js/app.js" defer></script>
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="main-card">
+        <div class="main-card__content">
+          <div class="main-card__img">
+            <img src="./src/images/image-jeremy.png" alt="Jeremy" />
+          </div>
+          <div class="main-card__body">
+            <div class="main-card__profile">
+              <span class="main-card__accent">Report for</span>
+              <h1 class="main-card__name">Jeremy Robson</h1>
+            </div>
+          </div>
+        </div>
+        <div class="main-card__details">
+          <p class="main-card__detail daily">Daily</p>
+          <p class="main-card__detail weekly active">Weekly</p>
+          <p class="main-card__detail monthly">Monthly</p>
+        </div>
+      </div>
+
+      <div class="card card--task-work">
+        <div class="wrapper">
+          <div class="card__body">
+            <div class="card__heading">
+              <h3 class="card__task-name">Work</h3>
+              <div class="card__options">
+                <img src="./src/images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </div>
+            </div>
+            <div class="card__detials">
+              <div class="card__task-duration-current">32hrs</div>
+              <div class="card__task-duration-previous">
+                Last <span class="description">Week</span> -
+                <span class="total-hrs">36hrs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--task-play">
+        <div class="wrapper">
+          <div class="card__body">
+            <div class="card__heading">
+              <h3 class="card__task-name">Play</h3>
+              <div class="card__options">
+                <img src="./src/images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </div>
+            </div>
+            <div class="card__detials">
+              <div class="card__task-duration-current">10hrs</div>
+              <div class="card__task-duration-previous">
+                Last <span class="description">Week</span> -
+                <span class="total-hrs">8hrs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--task-study">
+        <div class="wrapper">
+          <div class="card__body">
+            <div class="card__heading">
+              <h3 class="card__task-name">Study</h3>
+              <div class="card__options">
+                <img src="./src/images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </div>
+            </div>
+            <div class="card__detials">
+              <div class="card__task-duration-current">4hrs</div>
+              <div class="card__task-duration-previous">
+                Last <span class="description">Week</span> -
+                <span class="total-hrs">7hrs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--task-exercise">
+        <div class="wrapper">
+          <div class="card__body">
+            <div class="card__heading">
+              <h3 class="card__task-name">Exercise</h3>
+              <div class="card__options">
+                <img src="./src/images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </div>
+            </div>
+            <div class="card__detials">
+              <div class="card__task-duration-current">4hrs</div>
+              <div class="card__task-duration-previous">
+                Last <span class="description">Week</span> -
+                <span class="total-hrs">5hrs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--task-social">
+        <div class="wrapper">
+          <div class="card__body">
+            <div class="card__heading">
+              <h3 class="card__task-name">Social</h3>
+              <div class="card__options">
+                <img src="./src/images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </div>
+            </div>
+            <div class="card__detials">
+              <div class="card__task-duration-current">5hrs</div>
+              <div class="card__task-duration-previous">
+                Last <span class="description">Week</span> -
+                <span class="total-hrs">10hrs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card--task-self-care">
+        <div class="wrapper">
+          <div class="card__body">
+            <div class="card__heading">
+              <h3 class="card__task-name">Self Care</h3>
+              <div class="card__options">
+                <img src="./src/images/icon-ellipsis.svg" alt="ellipsis icon" />
+              </div>
+            </div>
+            <div class="card__detials">
+              <div class="card__task-duration-current">2hrs</div>
+              <div class="card__task-duration-previous">
+                Last <span class="description">Week</span> -
+                <span class="total-hrs">2hrs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
